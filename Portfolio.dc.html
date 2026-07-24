@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Space Grotesk', sans-serif; background: #f2efe8; color: #17130f; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #17130f; }
+  ::selection { background: #17130f; color: #f2efe8; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+</style>
+</helmet>
+<div style="max-width: 100%; overflow-x: hidden;">
+
+  <div data-progress style="position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: #a9855b; z-index: 60; transition: width 0.1s linear;"></div>
+
+  <nav data-nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 55; display: flex; align-items: center; justify-content: space-between; padding: 26px 36px; color: #f2efe8; transition: color 0.35s ease, background 0.35s ease, backdrop-filter 0.35s ease;">
+    <a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.08em; font-weight: 700;">HH<span style="opacity: 0.6;">/</span>PORTFOLIO</a>
+    <div style="display: flex; gap: 30px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em;">
+      <a href="#about" style="opacity: 0.85;">ABOUT</a>
+      <a href="#work" style="opacity: 0.85;">WORK</a>
+      <a href="#experience" style="opacity: 0.85;">EXPERIENCE</a>
+      <a href="#skills" style="opacity: 0.85;">EXPERTISE</a>
+      <a href="#contact" style="opacity: 0.85;">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" data-dark style="min-height: 100vh; background: #17130f; color: #f2efe8; display: flex; flex-direction: column; justify-content: space-between; padding: 96px 32px 32px;">
+    <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; opacity: 0.6;">
+      <span>SENIOR BRAND &amp; VISUAL IDENTITY DESIGNER</span>
+      <span>YEREVAN, ARMENIA &mdash; REMOTE (EU / US)</span>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 48px 0;">
+      <h1 style="font-size: clamp(56px, 13vw, 220px); line-height: 0.86; font-weight: 700; letter-spacing: -0.03em;">HAYK<br>HARUTYUNYAN</h1>
+      <p style="margin-top: 40px; max-width: 640px; font-size: clamp(17px, 2vw, 22px); line-height: 1.5; color: rgba(242,239,232,0.8);">Brand strategy, visual identity systems, packaging, editorial &amp; marketing design. 7+ years translating business goals into scalable visual systems across print and digital.</p>
+      <div style="margin-top: 44px; display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="#work" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; padding: 15px 26px; background: #f2efe8; color: #17130f; border-radius: 16px; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), background 0.28s ease, box-shadow 0.28s ease;" style-hover="background: #d9d3c6; color: #17130f; transform: translateY(-4px); box-shadow: 0 10px 24px rgba(23,19,15,0.28);">VIEW SELECTED WORK &darr;</a>
+        <a href="{{ cvUrl }}" target="_blank" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; padding: 15px 26px; border: 1px solid rgba(242,239,232,0.35); color: #f2efe8; border-radius: 16px; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), border-color 0.28s ease, background 0.28s ease;" style-hover="border-color: #f2efe8; transform: translateY(-4px); background: rgba(242,239,232,0.08);">DOWNLOAD CV</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MARQUEE -->
+  <div style="background: #17130f; color: #f2efe8; padding: 22px 0; border-top: 1px solid rgba(242,239,232,0.12); overflow: hidden;">
+    <div style="display: flex; width: max-content; animation: marquee 32s linear infinite; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.1em;">
+      <span style="padding: 0 28px;">BRAND STRATEGY &bull; VISUAL IDENTITY SYSTEMS &bull; LOGO DESIGN &bull; ART DIRECTION &bull; PACKAGING &bull; EDITORIAL &bull; PRINT PRODUCTION &bull; CAMPAIGN VISUALS &bull; SOCIAL MEDIA SYSTEMS &bull; PRESENTATION DESIGN &bull;</span>
+      <span style="padding: 0 28px;">BRAND STRATEGY &bull; VISUAL IDENTITY SYSTEMS &bull; LOGO DESIGN &bull; ART DIRECTION &bull; PACKAGING &bull; EDITORIAL &bull; PRINT PRODUCTION &bull; CAMPAIGN VISUALS &bull; SOCIAL MEDIA SYSTEMS &bull; PRESENTATION DESIGN &bull;</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" data-reveal="1" style="padding: 120px 32px; border-bottom: 1px solid rgba(23,19,15,0.12);">
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 60px; max-width: 1400px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; opacity: 0.5; padding-top: 12px;">(01) — PROFILE</span>
+        <p style="font-size: clamp(24px, 3.4vw, 46px); line-height: 1.28; font-weight: 500; letter-spacing: -0.01em; text-wrap: pretty;">Senior brand &amp; visual identity designer with 7+ years of experience creating strategic brand identities, packaging, editorial design, and marketing assets for startups and established businesses. Skilled in translating business goals into scalable visual systems across print and digital media &mdash; collaborating with cross-functional teams, creative agencies, and AI-focused startups to deliver impactful brand experiences from concept to execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="padding: 120px 32px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div data-reveal="1" style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 56px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; opacity: 0.5;">(02) — SELECTED WORK</span>
+        <h2 style="font-size: clamp(36px, 6vw, 84px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">Selected<br>Projects</h2>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+          <div data-reveal="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px 56px; align-items: center; padding: 72px 0; border-top: 1px solid rgba(23,19,15,0.14);">
+            <a href="Project.dc.html?id={{ p.id }}" style="display: block; position: relative; aspect-ratio: 4/3; background: #e4dfd4; background-image: repeating-linear-gradient(135deg, rgba(23,19,15,0.045) 0 2px, transparent 2px 11px); overflow: hidden; border-radius: 22px; order: {{ p.imgOrder }};" style-hover="opacity: 0.94;">
+              <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: rgba(23,19,15,0.4); text-align: center; padding: 0 24px;">{{ p.slot }}<br>&mdash; DROP IMAGE &mdash;</span>
+              {{ p.imgEl }}
+              <span style="position: absolute; top: 18px; left: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; color: #a9855b; z-index: 2;">{{ p.num }}</span>
+            </a>
+            <div style="order: {{ p.txtOrder }};">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #a9855b;">{{ p.num }} &mdash; {{ p.tag }}</span>
+              <h3 style="font-size: clamp(30px, 4.4vw, 60px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.0; margin-top: 16px;">{{ p.title }}</h3>
+              <p style="font-size: 17px; line-height: 1.55; color: rgba(23,19,15,0.66); margin-top: 20px; max-width: 480px; text-wrap: pretty;">{{ p.desc }}</p>
+              <a href="Project.dc.html?id={{ p.id }}" style="display: inline-block; margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; padding: 15px 26px; background: #17130f; color: #f2efe8; border-radius: 16px; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), background 0.28s ease, box-shadow 0.28s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 12px 26px rgba(23,19,15,0.24); background: #2a231c;">VIEW PROJECT &rarr;</a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" data-dark style="padding: 120px 32px; background: #17130f; color: #f2efe8;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 64px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; opacity: 0.45;">(03) — CAREER</span>
+        <h2 style="font-size: clamp(36px, 6vw, 84px); font-weight: 700; letter-spacing: -0.03em;">Experience</h2>
+      </div>
+      <div>
+        <sc-for list="{{ experience }}" as="job" hint-placeholder-count="6">
+          <div data-reveal="1" style="display: grid; grid-template-columns: 130px 1fr; gap: 28px; padding: 34px 0; border-top: 1px solid rgba(242,239,232,0.16);">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: rgba(242,239,232,0.55); padding-top: 8px;">{{ job.period }}</span>
+            <div>
+              <h3 style="font-size: clamp(22px, 2.6vw, 34px); font-weight: 600; letter-spacing: -0.01em;">{{ job.role }}</h3>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: rgba(242,239,232,0.55); margin-top: 6px;">{{ job.company }}</p>
+              <p style="font-size: 16px; line-height: 1.55; color: rgba(242,239,232,0.78); margin-top: 16px; max-width: 760px; text-wrap: pretty;">{{ job.summary }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="padding: 120px 32px; border-bottom: 1px solid rgba(23,19,15,0.12);">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div data-reveal="1" style="margin-bottom: 64px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; opacity: 0.5;">(04) — EXPERTISE</span>
+        <h2 style="font-size: clamp(36px, 6vw, 84px); font-weight: 700; letter-spacing: -0.03em; margin-top: 12px;">Core Expertise<br>&amp; Toolkit</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 4px 48px;">
+        <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="4">
+          <div data-reveal="1" style="padding: 28px 0; border-top: 1px solid rgba(23,19,15,0.16);">
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; margin-bottom: 20px;">{{ g.name }}</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+              <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
+                <li style="font-size: 17px; letter-spacing: -0.01em;">{{ it }}</li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4px 48px; margin-top: 64px;">
+        <div style="padding: 28px 0; border-top: 1px solid rgba(23,19,15,0.16);">
+          <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; margin-bottom: 20px;">INDUSTRIES</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="6">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; padding: 8px 14px; border: 1px solid rgba(23,19,15,0.25); border-radius: 999px;">{{ ind }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <div style="padding: 28px 0; border-top: 1px solid rgba(23,19,15,0.16);">
+          <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; margin-bottom: 20px;">LANGUAGES</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <sc-for list="{{ languages }}" as="l" hint-placeholder-count="3">
+              <li style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; border-bottom: 1px solid rgba(23,19,15,0.1); padding-bottom: 12px;"><span>{{ l.name }}</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; opacity: 0.6; text-align: right;">{{ l.level }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+        <div style="padding: 28px 0; border-top: 1px solid rgba(23,19,15,0.16);">
+          <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; margin-bottom: 20px;">EDUCATION</h3>
+          <p style="font-size: 17px; font-weight: 600;">Bachelor of Graphic Design</p>
+          <p style="font-size: 15px; color: rgba(23,19,15,0.6); margin-top: 8px; line-height: 1.45;">National University of Architecture and Construction of Armenia</p>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; opacity: 0.6; margin-top: 10px;">YEREVAN, ARMENIA &mdash; 2011&ndash;2015</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" data-dark style="background: #17130f; color: #f2efe8; padding: 120px 32px 40px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <span data-reveal="1" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; opacity: 0.45; display: inline-block;">(05) — CONTACT</span>
+      <h2 data-reveal="1" style="font-size: clamp(44px, 9vw, 150px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.92; margin-top: 24px;">Let&rsquo;s build<br>your brand.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 48px;">
+        <a href="{{ mailtoUrl }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.04em; padding: 17px 30px; background: #f2efe8; color: #17130f; border-radius: 16px; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), background 0.28s ease, box-shadow 0.28s ease;" style-hover="background: #d9d3c6; transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.35);">{{ email }}</a>
+        <a href="{{ behanceUrl }}" target="_blank" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.04em; padding: 17px 30px; border: 1px solid rgba(242,239,232,0.35); border-radius: 16px; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), border-color 0.28s ease, background 0.28s ease;" style-hover="border-color: #f2efe8; transform: translateY(-4px); background: rgba(242,239,232,0.08);">BEHANCE &nearr;</a>
+        <a href="{{ cvUrl }}" target="_blank" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.04em; padding: 17px 30px; border: 1px solid rgba(242,239,232,0.35); border-radius: 16px; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), border-color 0.28s ease, background 0.28s ease;" style-hover="border-color: #f2efe8; transform: translateY(-4px); background: rgba(242,239,232,0.08);">DOWNLOAD CV &darr;</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 120px; padding-top: 28px; border-top: 1px solid rgba(242,239,232,0.16); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: rgba(242,239,232,0.5);">
+        <span>&copy; 2026 HAYK HARUTYUNYAN</span>
+        <span>YEREVAN, ARMENIA &mdash; AVAILABLE FOR REMOTE WORK</span>
+        <a href="#top">BACK TO TOP &uarr;</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;harutyunyanletter@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;behanceUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.behance.net/bekaiharutyunyan&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;cvUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;uploads/cvharutyunyanhayk.pdf&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { slide: {} };
+  buildSlider(id, images) {
+    const idx = (this.state.slide && this.state.slide[id]) || 0;
+    const go = (i, e) => {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      const n = (i + images.length) % images.length;
+      this.setState(s => ({ slide: Object.assign({}, s.slide, { [id]: n }) }));
+    };
+    const btnStyle = { position: 'absolute', top: '50%', transform: 'translateY(-50%)', width: 38, height: 38, borderRadius: '50%', border: 'none', background: 'rgba(242,239,232,0.88)', color: '#17130f', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: 18, lineHeight: 1, zIndex: 3, boxShadow: '0 6px 16px rgba(23,19,15,0.22)', transition: 'transform 0.2s ease, background 0.2s ease' };
+    return React.createElement('div', { style: { position: 'absolute', inset: 0, overflow: 'hidden' } },
+      React.createElement('div', { style: { display: 'flex', width: '100%', height: '100%', transform: `translateX(-${idx * 100}%)`, transition: 'transform 0.65s cubic-bezier(0.65,0,0.35,1)' } },
+        images.map((src, i) => React.createElement('img', { key: i, src, alt: '', style: { width: '100%', height: '100%', objectFit: 'cover', flexShrink: 0 } }))
+      ),
+      React.createElement('button', { onClick: (e) => go(idx - 1, e), 'aria-label': 'Previous image', style: Object.assign({}, btnStyle, { left: 14 }) }, '\u2039'),
+      React.createElement('button', { onClick: (e) => go(idx + 1, e), 'aria-label': 'Next image', style: Object.assign({}, btnStyle, { right: 14 }) }, '\u203a'),
+      React.createElement('div', { style: { position: 'absolute', bottom: 16, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 6, zIndex: 3 } },
+        images.map((_, i) => React.createElement('span', {
+          key: i, onClick: (e) => go(i, e),
+          style: { width: i === idx ? 20 : 7, height: 7, borderRadius: 4, background: i === idx ? '#a9855b' : 'rgba(242,239,232,0.65)', transition: 'width 0.3s ease, background 0.3s ease', cursor: 'pointer', boxShadow: '0 1px 4px rgba(23,19,15,0.3)' }
+        }))
+      )
+    );
+  }
+  renderVals() {
+    const email = this.props.email ?? 'harutyunyanletter@gmail.com';
+    return {
+      email,
+      mailtoUrl: 'mailto:' + email,
+      behanceUrl: this.props.behanceUrl ?? 'https://www.behance.net/bekaiharutyunyan',
+      cvUrl: this.props.cvUrl ?? 'uploads/cvharutyunyanhayk.pdf',
+      projects: [
+        { id: 'posters', num: '01', slot: 'POSTERS', title: 'Posters', tag: 'PRINT / LARGE FORMAT', desc: 'A series of large-format promotional posters — from concept and composition to print-ready production.', imgOrder: 2, txtOrder: 1, imgEl: null },
+        { id: 'boxes', num: '02', slot: 'BOXES', title: 'Boxes', tag: 'PACKAGING', desc: 'Structural and surface packaging design — dielines, artwork, and production-ready files.', imgOrder: 1, txtOrder: 2, imgEl: null },
+        { id: 'alex-yvn', num: '03', slot: 'ALEX YVN', title: 'AleX YVN Rebranding & Labeling', tag: 'BRANDING / LABELING', desc: 'A full rebranding and labeling system for ALEX YVN — spanning campaign imagery, packaging, retail signage, stationery, and product hang tags.', imgOrder: 2, txtOrder: 1, imgEl: this.buildSlider('alex-yvn', ['uploads/alexyvn/03-wordmark.jpg', 'uploads/alexyvn/01-cover.jpg', 'uploads/alexyvn/02-campaign.jpg', 'uploads/alexyvn/05-street-banner-opening.jpg', 'uploads/alexyvn/06-street-banner-sale.jpg']) },
+        { id: 'susupus', num: '04', slot: 'SUSUPUS', title: 'Susupus', tag: 'BRAND IDENTITY', desc: 'A complete brand identity — mark, typography, color, and applications built from concept to execution.', imgOrder: 1, txtOrder: 2, imgEl: null },
+      ],
+      experience: [
+        { period: '2023 — PRESENT', role: 'Freelance Senior Brand Designer', company: 'Remote', summary: 'Designed original brand identity systems and marketing assets, including visual identity concepts developed for AI training datasets. Developed complete systems from concept to execution — logos, typography, color palettes, and supporting visual assets — scalable across digital products, presentations, marketing materials, and print.' },
+        { period: '2024', role: 'Freelance Brand Designer', company: 'AI Startup Campaigns & Marketing Design', summary: 'Designed promotional banners, social media visuals, and marketing materials aligned with startup goals. Translated complex concepts into clear, engaging visual communication, collaborating remotely with creative teams and project managers.' },
+        { period: 'SEP 2023 — JAN 2024', role: 'Seasonal Graphic Designer', company: 'Time Armenia — Yerevan, Armenia', summary: 'Produced large-scale advertising materials for digital and physical campaigns — billboards, banners, posters, and promotional graphics — maintaining visual consistency across multiple campaign touchpoints.' },
+        { period: 'APR 2022 — APR 2023', role: 'Branding & Multimedia Designer', company: 'AleX LLC — Yerevan, Armenia', summary: 'Collaborated directly with the Marketing Team Lead and Brand Director on the company rebranding initiative. Produced packaging, editorial layouts, presentations, and promotional assets supporting product launches, and mentored a junior design assistant.' },
+        { period: '2020 — 2022', role: 'Graphic Designer', company: 'Alparus Maritime — Remote', summary: 'Designed digital marketing materials, newsletters, and promotional graphics supporting international business communications, and produced graphics for online campaigns and corporate presentations.' },
+        { period: '2018 — 2021', role: 'Graphic Designer / Print Designer', company: 'ART PR — Yerevan, Armenia', summary: 'Designed print campaigns including brochures, posters, banners, and outdoor advertising. Produced print-ready files, coordinated production requirements, and created visual identities for commercial clients.' },
+      ],
+      skillGroups: [
+        { name: 'BRAND', items: ['Brand Strategy', 'Brand Identity Systems', 'Visual Identity Design', 'Logo Design', 'Art Direction'] },
+        { name: 'PRINT', items: ['Packaging Design', 'Editorial Design', 'Print Production', 'Large Format Graphics'] },
+        { name: 'DIGITAL', items: ['Marketing Design', 'Campaign Visuals', 'Social Media Systems', 'Presentation Design'] },
+        { name: 'SOFTWARE', items: ['Illustrator', 'Photoshop', 'InDesign', 'Figma', 'After Effects (Basic)', 'Midjourney', 'Notion / Slack / Trello'] },
+      ],
+      industries: ['AI & Technology', 'Retail', 'Maritime', 'FMCG', 'Packaging', 'Publishing'],
+      languages: [
+        { name: 'Armenian', level: 'NATIVE' },
+        { name: 'English', level: 'PROFESSIONAL (B2/C1)' },
+        { name: 'Russian', level: 'PROFESSIONAL' },
+      ],
+    };
+  }
+  componentDidMount() {
+    const ease = 'opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1)';
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = ease;
+      el.style.willChange = 'opacity, transform';
+    });
+    const io = new IntersectionObserver((entries) => {
+      // stagger siblings that enter together
+      const showing = entries.filter(e => e.isIntersecting);
+      const byParent = new Map();
+      showing.forEach(e => {
+        const p = e.target.parentElement;
+        const arr = byParent.get(p) || []; arr.push(e.target); byParent.set(p, arr);
+      });
+      byParent.forEach(group => {
+        group.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top || a.getBoundingClientRect().left - b.getBoundingClientRect().left);
+        group.forEach((el, i) => {
+          el.style.transitionDelay = Math.min(i * 90, 540) + 'ms';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          io.unobserve(el);
+        });
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+
+    // scroll progress bar + adaptive nav color
+    const bar = document.querySelector('[data-progress]');
+    const nav = document.querySelector('[data-nav]');
+    const darks = Array.from(document.querySelectorAll('[data-dark]'));
+    const hero = document.querySelector('h1');
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || document.documentElement.scrollTop;
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        if (bar) bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+        // adaptive nav: sample the section behind the bar
+        if (nav) {
+          const sampleY = 30;
+          const overDark = darks.some(s => { const r = s.getBoundingClientRect(); return r.top <= sampleY && r.bottom >= sampleY; });
+          nav.style.color = overDark ? '#f2efe8' : '#17130f';
+          if (y > 40) {
+            nav.style.background = overDark ? 'rgba(23,19,15,0.55)' : 'rgba(242,239,232,0.6)';
+            nav.style.backdropFilter = 'blur(10px)';
+            nav.style.webkitBackdropFilter = 'blur(10px)';
+          } else {
+            nav.style.background = 'transparent';
+            nav.style.backdropFilter = 'none';
+            nav.style.webkitBackdropFilter = 'none';
+          }
+        }
+        // subtle hero parallax while in view
+        if (hero && y < window.innerHeight) {
+          hero.style.transform = 'translateY(' + (y * 0.18) + 'px)';
+          hero.style.opacity = String(Math.max(0, 1 - y / (window.innerHeight * 0.85)));
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    this._onScroll = onScroll;
+  }
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+}
+</script>
+</body>
+</html>
